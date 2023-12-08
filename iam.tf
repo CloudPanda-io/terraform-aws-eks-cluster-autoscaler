@@ -11,7 +11,8 @@ data "aws_iam_policy_document" "kubernetes_cluster_autoscaler" {
       "autoscaling:SetDesiredCapacity",
       "autoscaling:TerminateInstanceInAutoScalingGroup",
       "ec2:DescribeLaunchTemplateVersions",
-      "ec2:DescribeInstanceTypes"
+      "ec2:DescribeInstanceTypes",
+      "eks:DescribeNodegroup"
     ]
     resources = [
       "*",
